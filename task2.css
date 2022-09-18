@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background: linear-gradient(to right,pink,skyblue);
+}
+.mainDiv{
+    width: 80%;
+    height: 1080px;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: lightyellow;
+}
+.img2{
+    height: 400px;
+    width: 100%;
+    float: right;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 25px;
+    color: black;
+    font-family: sans-serif;
+    text-align: justify;
+    margin: 20px;
+
+}
+.div2{
+    display: flex;
+    width: 100%;
+}
+.para{
+    width: 48%;
+    text-align: justify;
+}
+.img1{
+    height: 220px;
+    width: 40%;
+    margin-top: 20px;
+    float: right;
+    margin-left: 60px;
+}

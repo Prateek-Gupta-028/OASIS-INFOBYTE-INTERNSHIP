@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="newcss.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="main">
+            <img src="oasis_logo.jpg" class="logo"/>
+            &nbsp; Oasis Infobyte
+        </div>
+        <a href="home.html">Home</a>
+        <a href="task1.html">Task1</a>
+        <a href="task2.html">Task2</a>
+    </div>
+    <span class="h1">Todo List.... </span>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="Enter Here....">
+            <button id="push">ADD</button>
+        </div>
+        <div id="tasks"></div>
+    </div>
+    
+<script type="text/javascript">
+    document.querySelector('#push').onclick = function(){
+        if(document.querySelector('#newtask input').value.length == 0){
+            alert("Please enter a task")
+        }
+        else{
+            document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+            <span id="taskname">
+            ${document.querySelector('#newtask input').value}
+            </span>
+            <button class="delete">
+                Delete
+            </button>
+            </div>
+            `;
+
+            var current_tasks = document.querySelectorAll(".delete");
+            for(var i=0;i<current_tasks.length;i++){
+                current_tasks[i].onclick = function(){
+                    this.parentNode.remove();
+                }
+            }
+        }
+    }
+</script>
+<footer id="foot">
+    <i>Created By</i> :) <i>Prateek Gupta</i>
+</footer>
+</body>
+</html>
